@@ -4,7 +4,13 @@ class Bank():
         self.extract = {"withdraw": [], "deposit": []}
     
 
-    def withdraw(self, amount):
+    def withdraw(self):
+        while True:
+            try:
+                amount = float(input("Enter the amount to withdraw: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter a numeric value.")
         
         if (amount <= 0):
             return print("Incorrect value")
@@ -20,8 +26,15 @@ class Bank():
             self.extract["withdraw"].append(amount)
 
 
-    def deposit(self, amount):
-        
+    def deposit(self):
+
+        while True:
+            try:
+                amount = float(input("Enter the amount to deposit: "))
+                break
+            except ValueError:
+                print("Invalid input. Please enter a numeric value.")
+
         if (amount <= 0):
             print("Incorrect value")
 
