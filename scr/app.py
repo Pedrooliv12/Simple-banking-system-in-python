@@ -23,7 +23,6 @@ def main():
                 account.deposit()
                 input("Press Enter to continue...")
             case "2":
-                
                 clear_terminal()
                 account.withdraw()
                 input("Press Enter to continue...")
